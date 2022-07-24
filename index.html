@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>WEB Tugas Covid</title>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+	<!--Navbar-->
+
+	<div class="navbar">
+		<div class="logo">
+			<a href="#"><span>C</span>OVID-19</a>
+		</div>
+		<div class="menu">
+			<a href="#home">Home</a>
+			<a href="data.html">Data Covid</a>
+			<a href="berita.html">Berita</a>
+		</div>
+	</div>
+
+	<!--Navbar END-->
+
+	<!--IMG SlideShow-->
+
+	<div class="container">
+		<div class="header">
+			<div class="slideshow-container">
+
+				<div class="mySlides fade">
+				<img src="img/covid3.png"style="width: 100%">
+				</div>
+
+				<div class="mySlides fade">
+				<img src="img/covid.png" style="width: 100%">
+				</div>
+
+				<div class="mySlides fade">
+				<img src="img/covid1.png" style="width: 100%">
+				</div>
+
+				<div class="mySlides fade">
+				<img src="img/covid2.png" style="width: 100%">
+				</div>
+				
+			</div>
+
+			<div style="text-align:center">
+				<span class="dot"></span>
+				<span class="dot"></span>
+				<span class="dot"></span>
+				<span class="dot"></span>
+			</div>
+
+		</div>
+
+	<!--IMG SlideShow END-->
+
+	<!--Footer-->
+
+		<footer><h3> &copy;By <span>D</span>IAH</h3></footer>
+
+	<!--Footer End-->
+
+
+<script>
+	var slideIndex=0;
+	showSlides();
+		
+	function showSlides(){
+		var i;
+		var slides = document.getElementsByClassName("mySlides");
+		var dots = document.getElementsByClassName("dot");
+		for(i = 0; i<slides.length; i++){
+		slides[i].style.display = "none";
+	}
+		slideIndex++;
+		if(slideIndex > slides.length){slideIndex = 1}
+			for(i =0; i < dots.length; i++){
+			dots[i].className = dots[i].className.replace(" active","");
+			}
+		slides[slideIndex-1].style.display = "block";
+		dots[slideIndex-1].className += " active";
+		setTimeout(showSlides, 4000);
+	}	
+</script>
+</body>
+</html>
